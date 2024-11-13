@@ -13,6 +13,16 @@ public class Menu
     {
         Console.WriteLine(_location.Description);
         Console.WriteLine("What do you want to do?");
+        AskUser();
+    }
+
+    private void AskUser()
+    {
+        var response = Console.ReadLine();
+        if (response is not null)
+        {
+            _location.HandleResponse(response);
+        }
     }
     
     
