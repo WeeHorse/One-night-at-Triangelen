@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        new ToiletStall();
+        var player = new Player();
+        new ToiletStall(player);
     }
 }

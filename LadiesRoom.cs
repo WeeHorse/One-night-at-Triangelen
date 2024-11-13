@@ -3,7 +3,7 @@ namespace One_night_at_Triangelen;
 public class LadiesRoom:Location
 {
     
-    public LadiesRoom()
+    public LadiesRoom(Player player):base(player)
     {
         Description = "You are in the Ladies Room. There is a row of stalls, a bottle of booze and an exit.";
         _menu = new Menu(this);
@@ -15,11 +15,11 @@ public class LadiesRoom:Location
         {                                                
             case("exit"):                           
                 Console.WriteLine("exiting");       
-                new SecondFloor();                       
+                new SecondFloor(_player);                       
                 break;                       
             case("drink booze"):
                 Console.WriteLine("Glug glug glug");
-                new LadiesRoom(); // unnecesary...
+                new LadiesRoom(_player); // unnecesary...
                 // _menu.PrintOptions();
                 break;
         }                                                

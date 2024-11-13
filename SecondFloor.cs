@@ -2,7 +2,7 @@ namespace One_night_at_Triangelen;
 
 public class SecondFloor:Location
 {
-    public SecondFloor()
+    public SecondFloor(Player player):base(player)
     {
         Description =
             "You are on the second floor in what you recognize as Triangelen. There is an escallator and an entrance to the Ladies room.";
@@ -14,10 +14,10 @@ public class SecondFloor:Location
         switch (response)
         {
             case("enter escallator"):
-                new Escallator();
+                new Escallator(_player);
                 break;
             case("enter ladies room"):
-                new LadiesRoom();
+                new LadiesRoom(_player);
                 break;
             
         }
