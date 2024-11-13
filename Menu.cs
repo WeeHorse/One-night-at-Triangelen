@@ -9,7 +9,7 @@ public class Menu
         PrintOptions();
     }
 
-    private void PrintOptions()
+    public void PrintOptions()
     {
         Console.WriteLine(_location.Description);
         Console.WriteLine("What do you want to do?");

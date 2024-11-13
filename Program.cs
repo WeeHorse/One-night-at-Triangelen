@@ -4,7 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        ToiletStall toiletStall = new();
-        //toiletStall.GetMenu();
+        new ToiletStall();
     }
 }
